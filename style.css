@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Amatic SC', sans-serif;
+    margin: 0;
+    font-size: clamp(0.5rem, 1.8vw, 3rem);
+    background-image: url("\pumpkin.png");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: url("Ghost-pointer.cur"), auto;
+}
+.language-container {
+    display: flex;
+}
+.langWrap{
+    position: absolute;
+    right: 3%;
+    top: 5%;
+}
+button {
+    font-size: clamp(0.5rem, 2vw, 12rem);
+    float: right;
+    color: rgb(2, 255, 2);
+    cursor: pointer;
+    border: rgb(2, 255, 2) 0.125em outset;
+    border-radius: 0.9em;
+    background-color: transparent;
+    animation: flicker 1.5s infinite alternate;
+    box-shadow: inset 0 0 0.9em 0.3em rgb(2, 255, 2)
+    ,0 0 0.9em 0.4em rgb(2, 255, 2);
+}
+button:hover {
+    background: rgb(2, 255, 2);
+    box-shadow: inset 0 0 2em 2em rgb(2, 255, 2)
+    ,0 0 2em 2em rgb(2, 255, 2);
+    cursor: url("Pumpkin-pointer.cur"), auto;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 4px rgb(2, 255, 2),
+        0 0 11px rgb(2, 255, 2),
+        0 0 19px rgb(2, 255, 2),
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+a {
+    text-decoration: none;
+    color: rgb(139, 0, 0); 
+}
+a:hover {
+    color: rgba(33, 90, 3, 0.879);
+    cursor: url("Pumpkin-pointer.cur"), auto;
+}
+h1 {
+    padding-top: 25%;
+    font-size: clamp(0.5rem, 12vw, 12rem);
+    background: linear-gradient(aliceblue, rgb(7, 254, 7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 0.125em rgb(2, 255, 2);
+    animation: flicker 1.7s infinite alternate;
+}
+.big-text {
+    margin: 0 2%;
+    line-height: 1;
+}
+.countdown-container {
+    display: flex;
+    font-size: clamp(0.5rem, 6vw, 6rem);
+    color: white;
+    text-shadow:
+      0 0 7px white,
+      0 0 10px white,
+      0 0 21px white,
+      0 0 42px rgb(2, 249, 167),
+      0 0 82px rgb(2, 249, 167),
+      0 0 92px rgb(2, 249, 167),
+      0 0 102px rgb(2, 249, 167),
+      0 0 151px rgb(2, 249, 167);
+    gap: 3rem;
+    text-align: center;
+}
